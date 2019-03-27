@@ -1,0 +1,24 @@
+{
+    "name": "mpphp/view",
+    "description": "MPPHP view library.",
+    "keywords": ["php", "procedural", "framework", "mpphp", "view"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://mpphp.github.io/mpphp/",
+    "authors": [
+        {
+            "name": "Anitche Chisom",
+            "email": "anitchec.dev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "view.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1",
+        "mpphp/support": "dev-master"
+    }
+}
