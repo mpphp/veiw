@@ -40,7 +40,7 @@ function view__nests(string $template)
  * @param string $template
  * @param array $vars
  */
-function view(string $template, array $vars = [])
+function __view(string $template, array $vars = [])
 {
     global $app;
     extract($vars);
