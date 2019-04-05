@@ -5,7 +5,7 @@
  * @param array $config
  * @return string
  */
-function view__resolve_directory(string $template, array $config):string
+function _view__resolve_directory(string $template, array $config):string
 {
     $stripped_template = str_replace('.phtml', '', $template);
 
@@ -21,17 +21,17 @@ function view__resolve_directory(string $template, array $config):string
 /**
  * @param string $template
  */
-function view__extends(string $template)
+function _view__extends(string $template)
 {
     global $app;
-    require view__resolve_directory($template, $app['configs']);
+    require _view__resolve_directory($template, $app['configs']);
 }
 
 /**
  * @param string $template
  * @return mixed
  */
-function view__nests(string $template)
+function _view__nest(string $template)
 {
     return call_user_func($template);
 }
@@ -40,9 +40,9 @@ function view__nests(string $template)
  * @param string $template
  * @param array $vars
  */
-function __view(string $template, array $vars = [])
+function _view(string $template, array $vars = [])
 {
     global $app;
     extract($vars);
-    require view__resolve_directory($template, $app['configs']);
+    require _view__resolve_directory($template, $app['configs']);
 }
