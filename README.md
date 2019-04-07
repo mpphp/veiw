@@ -32,7 +32,7 @@ This would be a bad idea because now your View now has knowledge of your backend
 </form>
 ~~~
 
-Well technically, the two versions are the same.
+Well technically, the two versions are the same, the view is still aware of the back end logic.
 
 There are lots of third party Templating Engines out there like Smarty, Latte, Mustache, but most PHP frameworks come bundled with their own Templating engine, for example Symfony has Twig, Laravel has Blade and Phalcon has Volt. And MpPHP well, it just has a single file containing functions that mimic the important features of a Templating Engine  like Inheritance and Sections/Blocks that we like to call VIEW.
 
@@ -69,7 +69,7 @@ When defining a child vtemplate, use the _view__extends() function to specify wh
 ~~~
 <!-- Stored in resources/views/child.phtml -->
 
-<?php _view__extends('layouts/app')>
+<?php _view__extends('layouts/app') ?>
 
 <?php function title() { ?>
     Child Page
