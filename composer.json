@@ -19,6 +19,6 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.1",
-        "mpphp/support": "dev-master"
+        "mpphp/support": "~v1.0.0-alpha"
     }
 }
